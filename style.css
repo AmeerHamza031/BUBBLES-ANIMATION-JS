@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(43, 126, 80);
+    min-height: 100%;
+    width: 90%;
+    overflow-x: hidden;
+}
+
+div {
+    font-size: 10em;
+}
+
+div span {
+    position: absolute;
+    background: pink;
+    bottom: 0;
+    border-radius: 50%;
+    pointer-events: hover;
+    animation: anim 4s linear infinite;
+}
+
+div span:hover {
+    background-color: red;
+    animation-play-state: paused;
+}
+
+@keyframes anim {
+    0% {
+        transition: translatey(0%);
+        opacity: 5;
+    }
+
+    100% {
+        transform: translateY(-800px);
+        opacity: 5;
+    }
+}
